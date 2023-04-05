@@ -11,7 +11,7 @@ const [error,setError]=useState("")
 const handleSignin=()=>{
   setError("")
   setLoading(true);
-  if(email === "" || password === ""  || username ===""){
+  if(email === "" || password === ""  || username ===""  ){
     setError('Required field is missing ')
     setLoading(false)
   }

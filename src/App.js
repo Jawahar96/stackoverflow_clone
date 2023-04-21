@@ -2,7 +2,7 @@
 import './App.css';
 import React, { useEffect } from 'react';
 import Header from './Frontend/Header/Header';
-import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
+import { BrowserRouter as Router,Switch,Route, BrowserRouter } from 'react-router-dom';
 import Stackoverflow from './Frontend/Stackoverflow/index'
 import ViewQuestion from './Frontend/ViewQuestion/MainQuestion'
 import Question from './Frontend/Add-Question/Question'
@@ -13,6 +13,7 @@ function App() {
   
   return (
     <div>
+    <BrowserRouter>
       <Header />
       <Router>
         <Switch>
@@ -22,6 +23,7 @@ function App() {
           <Route exact path='/' component={Stackoverflow} />
          </Switch>
       </Router>
+      </BrowserRouter>
       
     </div>
   );

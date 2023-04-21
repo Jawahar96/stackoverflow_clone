@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import './index.css'
+import './index.css';
+
 
 function Index() {
 const[register,setRegister]=useState(false)
@@ -15,7 +16,7 @@ const handleSignin=()=>{
     setError('Required field is missing ')
     setLoading(false)
   }
-  signInwithPopup(auth,provider).then((res)=>{
+  loading().then((res)=>{
     console.log(res);
   })
 }
@@ -26,7 +27,7 @@ const handleRegister=()=>{
     setError("Required field is missing")
     setLoading(false)
   }else{
-    createUserwithEmailAndPassword(auth,email,password).then((res)=>{
+    setEmail(true).then((res)=>{
       setLoading(false)
       console.log(res);
         
@@ -56,11 +57,11 @@ const handleRegister=()=>{
                             <>
                             <div className='input-field'>
                              <p>User name</p>
-                             <input type='text' />
+                             <input value={username} onChange={(e)=>setUsername(e.target.value)} type='text' />
                              </div>
                              <div className='input-field'>
                              <p>Email</p>
-                             <input type='text' />
+                             <input value={email} onChange={(e)=>setEmail(e.target.value)} type='text' />
                              </div>
                              <div className='input-field'>
                              <p>Password</p>
@@ -74,7 +75,7 @@ const handleRegister=()=>{
                               <>
                               <div className='input-field'>
                              <p>Email</p>
-                             <input type='text' />
+                             <input   value={email} onChange={(e)=>setEmail(e.target.value)} type='text' />
                              </div>
                              <div className='input-field'>
                              <p>Password</p>

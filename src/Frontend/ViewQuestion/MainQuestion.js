@@ -8,7 +8,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
 import './index.css'
-import { borderRadius, fontWeight } from '@mui/system';
+
 function MainQuestion() {
 
     const [show,setshow]=useState(false)

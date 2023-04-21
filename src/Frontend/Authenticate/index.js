@@ -38,6 +38,7 @@ const handleRegister=()=>{
     })
   }
 }
+
   return (
     <div>    
         <div className='auth'>
